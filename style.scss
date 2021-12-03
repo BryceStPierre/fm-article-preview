@@ -1,0 +1,69 @@
+$veryDarkGrayBlue: hsl(217, 19%, 35%);
+$desaturatedDarkBlue: hsl(214, 17%, 51%);
+$grayBlue: hsl(212, 23%, 69%);
+$lightGrayBlue: hsl(210, 46%, 95%);
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: stretch;
+
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+.card {
+  margin: auto;
+
+  &__img {
+
+  }
+
+  &__heading {
+
+  }
+
+  &__text {
+
+  }
+}
+
+.author {
+  &__avatar {
+
+  }
+
+  &__name {
+
+  }
+
+  &__date {
+
+  }
+}
+
+.share {
+  &__heading {
+
+  }
+
+  &__icon {
+
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
