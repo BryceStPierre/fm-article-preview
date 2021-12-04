@@ -1,38 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Article preview component</title>
-</head>
+  <body>
+    <main class="card">
+      <img
+        class="card__img"
+        src="images/drawers.jpg"
+        width="660"
+        height="528"
+        alt="Furniture with decorations"
+      />
+      <article class="card__body">
+        <h1 class="card__heading">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h1>
+        <p class="card__text">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+      </article>
+      <aside class="card__footer">
+        <section class="info">
+          <img
+            class="info__avatar"
+            src="images/avatar-michelle.jpg"
+            width="175"
+            height="175"
+            alt="Michelle"
+          />
+          <div class="info__published">
+            <h2 class="info__author">Michelle Appleton</h2>
+            <time class="info__date" datetime="2020-06-28">28 Jun 2020</time>
+          </div>
+        </section>
+        <section class="share">
+          <div class="share__actions">
+            <h2 class="share__heading">Share</h2>
+            <i class="icon icon--fb"></i>
+            <i class="icon icon--tw"></i>
+            <i class="icon icon--pin"></i>
+          </div>
+          <button id="shareBtn" class="btn">
+            <i class="icon icon--share"></i>
+          </button>
+        </section>
+      </aside>
+    </main>
 
-<body>
+    <footer class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/BryceStPierre"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Bryce St. Pierre</a
+      >.
+    </footer>
 
-  Shift the overall look and feel by adding these wonderful
-  touches to furniture in your home
-
-  Ever been in a room and felt like something was missing? Perhaps
-  it felt slightly bare and uninviting. I’ve got some simple tips
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
