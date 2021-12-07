@@ -34,6 +34,7 @@ body {
   width: 325px;
   max-width: 100%;
   background-color: #fff;
+  box-shadow: 0 2rem 4rem -3rem #9eafc2;
 
   &__header {
     background-image: url(./images/drawers.jpg);
@@ -141,6 +142,7 @@ body {
   border: none;
   line-height: 1;
   padding: 0.5rem;
+  cursor: pointer;
 
   &--alt {
     fill: #fff;
@@ -185,4 +187,82 @@ body {
 .attribution a {
   color: $veryDarkGrayBlue;
   font-weight: 700;
+}
+
+@media only screen and (min-width: 780px) {
+  .card {
+    width: 730px;
+    display: grid;
+    overflow: visible;
+    grid-template-columns: 40% 60%;
+
+    &__header {
+      height: 100%;
+      grid-row: span 2;
+      background-position: left 30%;
+      border-top-left-radius: 0.75rem;
+      border-bottom-left-radius: 0.75rem;
+    }
+
+    &__body {
+      padding: 1.85rem 1.85rem 0 1.85rem;
+    }
+
+    &__heading {
+      margin: 0 0 1em 0;
+      line-height: 1.25;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    &__text {
+      margin: 0 0 1.25em 0;
+    }
+
+    &__footer {
+      padding: 0 1.85rem 1.85rem 1.85rem;
+    }
+
+    &__footer--share {
+      background-color: unset;
+      display: flex;
+    }
+
+    &__footer--share .info {
+      display: flex;
+    }
+  }
+
+  .share {
+    position: relative;
+
+    &__actions {
+      padding: 1.15rem 1.5rem;
+      border-radius: 0.5rem;
+      display: none;
+      position: absolute;
+      background-color: $veryDarkGrayBlue;
+      left: -108px;
+      top: -75px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: calc(-1rem + 1px);
+        left: 50%;
+        margin-left: -1rem;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 1rem 1rem 0 1rem;
+        border-color: $veryDarkGrayBlue transparent transparent transparent;  
+      }
+    }
+
+    &__actions > * {
+      margin: 0;
+      padding: 0 0.5rem;
+    }
+  }
 }
