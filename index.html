@@ -22,13 +22,7 @@
 
   <body>
     <main class="card">
-      <img
-        class="card__img"
-        src="images/drawers.jpg"
-        width="660"
-        height="528"
-        alt="Furniture with decorations"
-      />
+      <header class="card__header"></header>
       <article class="card__body">
         <h1 class="card__heading">
           Shift the overall look and feel by adding these wonderful touches to
@@ -57,12 +51,20 @@
         <section class="share">
           <div class="share__actions">
             <h2 class="share__heading">Share</h2>
-            <i class="icon icon--fb"></i>
-            <i class="icon icon--tw"></i>
-            <i class="icon icon--pin"></i>
+            <a href="#">
+              <i class="icon icon--fb"></i>
+            </a>
+            <a href="#">
+              <i class="icon icon--tw"></i>
+            </a>
+            <a href="#">
+              <i class="icon icon--pin"></i>
+            </a>
           </div>
           <button id="shareBtn" class="btn">
-            <i class="icon icon--share"></i>
+            <i class="icon icon--share">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+            </i>
           </button>
         </section>
       </aside>

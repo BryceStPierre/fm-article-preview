@@ -3,19 +3,22 @@ $desaturatedDarkBlue: hsl(214, 17%, 51%);
 $grayBlue: hsl(212, 23%, 69%);
 $lightGrayBlue: hsl(210, 46%, 95%);
 
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 html,
 body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  min-height: stretch;
+  height: 100vh;
+  height: -webkit-fill-available;
+  height: stretch;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   background-color: $lightGrayBlue;
@@ -27,54 +30,76 @@ body {
 
 .card {
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   width: 325px;
   max-width: 100%;
   background-color: #fff;
 
-  &__img {
+  &__header {
+    background-image: url(./images/drawers.jpg);
+    background-position: center 30%;
+    background-size: cover;
     width: 100%;
-    height: auto;
+    height: 200px;
   }
 
   &__body {
-    padding: 1.25rem 1rem;
+    padding: 1.4rem 1.85rem 0.85rem;
   }
 
   &__heading {
-    line-height: 1.25;
-    font-size: 1.25rem;
+    line-height: 1.5;
+    font-size: 1.025rem;
     font-weight: 700;
   }
 
   &__text {
     line-height: 1.5;
-    font-size: 0.75rem;
+    font-size: 0.84rem;
     color: $desaturatedDarkBlue;
+    margin-bottom: 0;
   }
 
   &__footer {
-    padding: 1rem 0;
+    padding: 1rem 1.85rem;
     display: flex;
   }
+
+  &__footer--share {
+    background-color: $veryDarkGrayBlue;
+    display: block;
+  }
+}
+
+.card__footer--share .info {
+  display: none;
+}
+
+.card__footer--share .share__actions {
+  display: flex;
 }
 
 .info {
   display: flex;
+  align-items: center;
   margin-right: auto;
 
   &__avatar {
-    width: 4rem;
+    width: 2.5rem;
     height: auto;
+    line-height: 1;
+    border-radius: 50%;
   }
 
   &__published {
-    margin-left: 1rem;
+    margin-left: 1.1rem;
   }
 
   &__author {
     font-size: 0.8rem;
     font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
   }
 
   &__date {
@@ -84,47 +109,66 @@ body {
 }
 
 .share {
+  display: flex;
+  align-items: center;
+
   &__actions {
     display: none;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  &__actions > * {
+    margin-right: 1rem;
   }
 
   &__heading {
     text-transform: uppercase;
-  }
-
-  &--open {
-    display: flex;
+    color: $grayBlue;
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.4rem;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 .btn {
   border-radius: 50%;
-  color: $veryDarkGrayBlue;
+  fill: $veryDarkGrayBlue;
   background-color: $lightGrayBlue;
-  display: inline-block;
+  outline: none;
+  border: none;
+  line-height: 1;
+  padding: 0.5rem;
 
   &--alt {
-
+    fill: #fff;
+    background-color: $desaturatedDarkBlue;
   }
 }
 
 .icon {
-  fill: inherit;
+  height: 1.25rem;
+  width: auto;
 
-  &--share {
-    content: url(./images/icon-share.svg);
+  &--share svg path {
+    fill: inherit;
   }
 
   &--fb {
     content: url(./images/icon-facebook.svg);
+    vertical-align: middle;
   }
 
   &--tw {
     content: url(./images/icon-twitter.svg);
+    vertical-align: middle;
   }
 
   &--pin {
     content: url(./images/icon-pinterest.svg);
+    vertical-align: middle;
   }
 }
 
@@ -139,5 +183,6 @@ body {
 }
 
 .attribution a {
-  font-weight: 500;
+  color: $veryDarkGrayBlue;
+  font-weight: 700;
 }
